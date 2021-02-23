@@ -1,0 +1,26 @@
+﻿@model Z_Market2.Models.Country
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Country</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCountry)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CountryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

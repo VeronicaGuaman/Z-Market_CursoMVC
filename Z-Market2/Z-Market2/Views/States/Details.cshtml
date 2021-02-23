@@ -1,0 +1,34 @@
+﻿@model Z_Market2.Models.State
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>State</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.NameCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.NameCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameState)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StateID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

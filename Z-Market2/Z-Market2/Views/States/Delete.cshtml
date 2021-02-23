@@ -1,0 +1,40 @@
+﻿@model Z_Market2.Models.State
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>State</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.NameCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.NameCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameState)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
